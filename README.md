@@ -16,7 +16,7 @@ Here, we provide the source code for our implementation.
 
 More information can be found in our papers [ISRR 2019](https://arxiv.org/abs/1903.08470) and [JCVS 2020 (Conditionally Accepted)](https://arxiv.org/abs/1912.05958)
 
-![Analytical](analytical_coarse.png "Analytical Coarse Physics Prediction")
+[<img src="analytical_coarse.png" width="407" height="190"/>][<img src="learned_coarse.png" width="350" height="284"/>]
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ Mujoco
 
  
 ## Citation
-If you find the code useful in your research, please consider citing [ISRR 2019](https://arxiv.org/abs/1903.08470) 
+If you find the code useful please consider citing [ISRR 2019](https://arxiv.org/abs/1903.08470) 
 
 @inproceedings{agboh_isrr19,
   author    = {Wisdom C. Agboh and
