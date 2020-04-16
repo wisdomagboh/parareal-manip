@@ -59,7 +59,7 @@ and [JCVS 2020 (Conditionally Accepted)](https://arxiv.org/abs/1912.05958)
 
 ## Watch a video
 
-[<img src="pusher_slider.png" width="200" height="200"/>](https://youtu.be/5e9oTeu4JOU) [<img src="planning_with_learned_model.jpg" width="200" height="200"/>]((https://youtu.be/wCh2o1rf-gA)
+[<img src="pusher_slider.png" width="400" height="400"/>](https://youtu.be/5e9oTeu4JOU) [<img src="planning_with_learned_model.jpg" width="400" height="400"/>](https://youtu.be/wCh2o1rf-gA)
 
 ## Have a question?
 For all queries please contact Wisdom Agboh (wisdomagboh@gmail.com).
