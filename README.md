@@ -16,7 +16,7 @@ Here, we provide the source code for our implementation.
 
 More information can be found in our papers [ISRR 2019](https://arxiv.org/abs/1903.08470) and [JCVS 2020](https://arxiv.org/abs/1912.05958) (Conditionally Accepted)
 
-<img src="analytical_coarse.png" width="204" height="95"/>   <img src="learned_coarse.png" width="175" height="142"/> <img src="box_center_analytical.png" width="188" height="113"/>   <img src="learned_two_sliders.png" width="143" height="105"/> 
+<img src="analytical_coarse.png" width="204" height="95"/>   <img src="box_center_analytical.png" width="188" height="113"/> <img src="learned_coarse.png" width="175" height="142"/>   <img src="learned_two_sliders.png" width="143" height="105"/> 
 
 ## Getting Started
 
