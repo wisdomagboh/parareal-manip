@@ -16,11 +16,7 @@ Here, we provide the source code for our implementation.
 
 More information can be found in our papers [ISRR 2019](https://arxiv.org/abs/1903.08470) and [JCVS 2020 (Conditionally Accepted)](https://arxiv.org/abs/1912.05958)
 
-
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![Learned](learned_coarse.png "Parareal Predictions with a Learned Coarse Model")  |  ![Analytical](analytical_coarse.png "Analytical Coarse Physics Prediction")
-
+![Analytical](analytical_coarse.png "Analytical Coarse Physics Prediction")
 
 ## Getting Started
 
