@@ -59,7 +59,7 @@ and [JCVS 2020 (Conditionally Accepted)](https://arxiv.org/abs/1912.05958)
 
 ## Watch a video
 
-[![ISRR 2019](<img src="pusher_slider.png" width="100" height="100"/>)](https://youtu.be/5e9oTeu4JOU) [![JCVS 2020](https://i9.ytimg.com/vi/wCh2o1rf-gA/mq2.jpg?sqp=CLvR4PQF&rs=AOn4CLBEJLqzw5YNYWvoxR-8J0IIMISw8g)](https://youtu.be/wCh2o1rf-gA)
+[<img src="pusher_slider.png" width="100" height="100"/>](https://youtu.be/5e9oTeu4JOU) [![JCVS 2020](https://i9.ytimg.com/vi/wCh2o1rf-gA/mq2.jpg?sqp=CLvR4PQF&rs=AOn4CLBEJLqzw5YNYWvoxR-8J0IIMISw8g)](https://youtu.be/wCh2o1rf-gA)
 
 ## Have a question?
 For all queries please contact Wisdom Agboh (wisdomagboh@gmail.com).
