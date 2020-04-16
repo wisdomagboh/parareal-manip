@@ -14,9 +14,9 @@ We propose two coarse physics models for robotic pushing --- An analytical and a
 
 Here, we provide the source code for our implementation. 
 
-More information can be found in our papers [ISRR 2019](https://arxiv.org/abs/1903.08470) and [JCVS 2020](https://arxiv.org/abs/1912.05958)(Conditionally Accepted)
+More information can be found in our papers [ISRR 2019](https://arxiv.org/abs/1903.08470) and [JCVS 2020](https://arxiv.org/abs/1912.05958) (Conditionally Accepted)
 
-<img src="analytical_coarse.png" width="204" height="95"/>   <img src="learned_coarse.png" width="175" height="142"/> 
+<img src="analytical_coarse.png" width="204" height="95"/>   <img src="learned_coarse.png" width="175" height="142"/> <img src="box_center_analytical.png" width="204" height="95"/>   <img src="learned_two_sliders.png" width="175" height="142"/> 
 
 ## Getting Started
 
@@ -45,7 +45,7 @@ If you find the code useful please consider citing [ISRR 2019](https://arxiv.org
   year      = {2019}
 }
 
-**and** [JCVS 2020](https://arxiv.org/abs/1912.05958)(Conditionally accepted)
+**and** [JCVS 2020](https://arxiv.org/abs/1912.05958) (Conditionally accepted)
 
 @article{agboh_jcvs20,
   author    = {Wisdom C. Agboh and
