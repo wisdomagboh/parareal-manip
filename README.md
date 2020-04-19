@@ -52,7 +52,7 @@ We use coarse models (analytical and learned) and fine model (Mujoco) with Parar
 	2. Generate results: plots, frames, text files. 
  		$ bash plot_generation.sh 
 
-Alternatively skip step 1 and extract data into the project directory. Data is on Dropbox [here](https://www.dropbox.com/s/2arko70bhzc9t9m/exp_dataset.zip?dl=0) (170 MB). 
+Alternatively, skip step 1 and extract data into the project directory. Data is on Dropbox [here](https://www.dropbox.com/s/2arko70bhzc9t9m/exp_dataset.zip?dl=0) (170 MB). 
 
 ## Citation
 If you find the code useful please consider citing our paper at [ISRR 2019](https://arxiv.org/abs/1903.08470) 
