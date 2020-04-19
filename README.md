@@ -52,7 +52,7 @@ We use coarse models (analytical and learned) and fine model (Mujoco) with Parar
  		$ bash plot_generation.sh 
 		
 ## Citation
-If you find the code useful please consider citing [ISRR 2019](https://arxiv.org/abs/1903.08470) 
+If you find the code useful please consider citing our paper at [ISRR 2019](https://arxiv.org/abs/1903.08470) 
 
 	@inproceedings{agboh_isrr19,
 	  author    = {Wisdom C. Agboh and
@@ -64,7 +64,7 @@ If you find the code useful please consider citing [ISRR 2019](https://arxiv.org
 	  year      = {2019}
 	}
 
-**and** [JCVS 2020](https://arxiv.org/abs/1912.05958) (Conditionally accepted)
+**and** our journal article [JCVS 2020](https://arxiv.org/abs/1912.05958) (Conditionally accepted)
 
 	@article{agboh_jcvs20,
 	  author    = {Wisdom C. Agboh and
