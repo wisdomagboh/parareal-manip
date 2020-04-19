@@ -1,0 +1,46 @@
+# File/folder descriptions
+
+common, include, stl_files   - contain files which are included in the pusher domain
+
+config.py					- Contains general parameters used throughout including for coarse and fine models.
+
+data_generator.py - generates state data for an environment with an applied action.
+										Applies a first action (not recorded) in order to create realistic object velocities.
+										Then it uses the resulting state as input to which another action is applied.
+										The input state, action, and resulting state are recorded. Also renders the real frames.
+
+generate_plots.sh - It runs the python script for experimental data plotting with many different parameters.
+
+model_weights.h5  - the weights of a trained model that can predict for up to 4 sliders.
+										Network configuration: 25(=input),512,256,128,64,24(=output), activation=relu, use_bias=True
+
+parareal_manipulation.py - Implements two coarse models and one fine model for Parareal.
+ 													Used to generate experimental data.
+
+plot_generation.py - Uses experimental data to generate results: plots, imgae frames, and text files.
+
+run_experiment.sh - Runs the parareal_manipulation.py script with several inputs to generate experimental data.
+
+test_model.py 	  - takes a trained model and test data and computes the error in its predictions.
+										Also can render predicted final state vs. correct state.
+
+train_model.py    - takes csv files containing training and testing data to train a model.
+										Can save the model or its weights to be used or tested, or re-trained with
+										different hyperparameters or a different dataset afterwards.
+										Has the option of using a custom loss function which penalizes object penetration.
+
+Sample result:
+
+Fig. 2 error plot in Agboh et. al. (CVS 2020) can be found in:
+
+exp_dataset/1slider_4/parareal_plots/1S_rms_log_xy_error.png
+
+I.e after data generation and plotting / direct data download.
+
+# This plot is the xy position error log plot for 1 slider and a control sequence with 4 actions.
+# Data used to generate the plot is in exp_dataset/1slider_4/parareal_data
+# Image frames for Parareal with the learned model are found e.g. in:
+ exp_dataset/11slider_4/parareal_frames/learned_model/sequence_1/iteration_0
+# Note that iteratio 0 is the coarse prediction.
+# Physics simulation time plots are in exp_dataset/11slider_4/time_plots
+# Max. Object displacements are written to file exp_dataset/1slider_4/results.txt
