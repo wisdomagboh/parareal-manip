@@ -76,9 +76,10 @@ If you find the code useful please consider citing our paper at [ISRR 2019](http
 	  year      = {2020}
 	}
 
-## Watch a video
+## Watch videos
 
-[<img src="pusher_slider.png" width="280" height="200"/>](https://youtu.be/5e9oTeu4JOU) [<img src="planning_with_learned_model.jpg" width="280" height="200"/>](https://youtu.be/wCh2o1rf-gA)
+[ISRR 2019](https://youtu.be/5e9oTeu4JOU) 
+[JVCS 2020](https://youtu.be/wCh2o1rf-gA)
 
 ## Have a question?
 For all queries please contact Wisdom Agboh (wisdomagboh@gmail.com).
