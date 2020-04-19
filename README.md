@@ -25,7 +25,7 @@ More information can be found in our conference paper [ISRR 2019](https://arxiv.
 		Follow instructions from Deepmind's dm_control project https://github.com/deepmind/dm_control.
 
 	3. Install other required python packages 
-		$  pip install numpy pandas pyquaternion shapely matplotlib IPython tensorflow==2.0.0-beta1 pillow
+		$  pip install numpy pandas pillow pyquaternion matplotlib IPython tensorflow==2.0.0-beta1 shapely==1.6.4 
 	
 	4. Clone this repo/ Download and extract zip file.
 		$ git clone https://github.com/wisdomagboh/parareal-manipulation.git
