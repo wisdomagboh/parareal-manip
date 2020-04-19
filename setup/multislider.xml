@@ -1,0 +1,70 @@
+<mujoco model="mulitslider">
+	<option	gravity="0 0 -9.8"/>
+
+	<include file="./common/visual.xml"/>
+	<include file="./common/skybox.xml"/>
+	<include file="./common/materials.xml"/>
+
+	<default>
+
+		<default class="pusher_cylinder">
+			<geom type="cylinder" friction="0.2 0.2 0.2" size="0.0145 0.055" rgba="1 0.1 .1 1" mass="8"  />
+		</default>
+
+		<default class="slider_cylinder">
+			<geom type="cylinder" friction="0.2 0.2 0.2" size="0.05115 0.01225" rgba="1 0.1 .1 1" mass="0.5"  />
+		</default>
+
+		<default class="slider_box">
+			<geom type="box" friction="0.8 0.8 0.5" size="0.0545 0.077 0.0055" rgba="1 0.1 .1 1" mass="0.5"  />
+		</default>
+	
+	</default>
+
+	<worldbody>
+
+		<geom name="table_0" type="plane" size="2 2 0.0001" friction="0.5 0.5 0.5" rgba="0.6 0.6 0.6 1"/>
+
+		<camera name="fixed" pos="0.1 0 0.8" quat="1 0 0 0" />
+		<light name="light" directional="true" diffuse=".6 .6 .6" pos="0 0 1" specular=".3 .3 .3" castshadow="false"/>
+
+		<body name="pusher" pos="0 0 0" quat="1 0 0 0" childclass="pusher_cylinder">
+			<geom name="pusher" size="0.0145 0.055" pos="0 0 0" rgba="0.2 0.2 1 1"/>
+			<joint axis="1 0 0" damping="0." name="robot_x" pos="0 0 0" type="slide" range="-1 1"/>
+			<joint axis="0 1 0" damping="0." name="robot_y" pos="0 0 0" type="slide" range="-1 1"/>
+		</body>
+
+		<body name="slider1" pos="0.2 0 0" quat="1 0 0 0" childclass="slider_cylinder">
+			<geom name="slider1" size="0.05115 0.01225" pos="0 0 0" rgba="0 0.4 0 0.7"/>
+			<joint name="slide1" type="free" limited='false'/>
+		</body>
+
+		<body name="slider2" pos="0.4 0 0" quat="1 0 0 0" childclass="slider_cylinder">
+			<geom name="slider2" size="0.05115 0.01225" pos="0 0 0" rgba="0 0.4 0 0.7"/>
+			<joint name="slide2" type="free" limited='false'/>
+		</body>
+
+		<body name="slider3" pos="0.6 0 0" quat="1 0 0 0" childclass="slider_cylinder">
+			<geom name="slider3" size="0.05115 0.01225" pos="0 0 0" rgba="0 0.4 0 0.7"/>
+			<joint name="slide3" type="free" limited='false'/>
+		</body>
+
+		<body name="slider4" pos="0.8 0 0" quat="1 0 0 0" childclass="slider_cylinder">
+			<geom name="slider4" size="0.05115 0.01225" pos="0 0 0" rgba="0 0.4 0 0.7"/>
+			<joint name="slide4" type="free" limited='false'/>
+		</body>
+
+	</worldbody>
+
+	<actuator>
+
+		<velocity name="robot_xv" joint="robot_x" kv="460000"/>
+		<velocity name="robot_yv" joint="robot_y" kv="460000"/>
+
+		<position name="robot_xp" joint="robot_x" kp="580000"/>
+		<position name="robot_yp" joint="robot_y" kp="580000"/>
+
+	</actuator>
+
+
+</mujoco>

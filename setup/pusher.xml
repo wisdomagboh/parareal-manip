@@ -1,0 +1,145 @@
+<mujoco model="pusher">
+    <compiler angle="radian" />
+    <option	gravity="0 0 -9.8"/>
+    <size njmax="500" nconmax="100" />
+
+    <include file="./common/visual.xml"/>
+    <include file="./common/skybox.xml"/>
+    <include file="./common/materials.xml"/>
+
+    <include file="include/actuators_light.xml"/>
+
+    <asset>
+        <include file="./include/table_assets.xml"/>
+        <include file="./include/robot_assets.xml"/>
+        <texture name="background" builtin="flat" type="2d" mark="random" markrgb="1 1 1" width="800" height="800" rgb1=".2 .3 .4"/>
+        <material name="background" texture="background" texrepeat="1 1" texuniform="true"/>
+    </asset>
+
+    <default>
+      <default class="pringles">
+      <geom type="cylinder" friction="0.3 0.3 0.5" size="0.0375 0.13" rgba="1 0.1 0.3 1" mass="5"  />
+      </default>
+
+      <default class="cheerios">
+      <geom type="box" friction="0.2 0.2 0.2" size="0.035 0.0975 0.15" rgba="0 0.2 .8 1" mass="15"  />
+      </default>
+
+      <default class="cheerios_2">
+      <geom type="box" friction="0.2 0.2 0.2" size="0.035 0.0975 0.055" rgba="0 0.2 .8 1" mass="15"  />
+      </default>
+
+      <default class="abox">
+      <geom type="box" friction="0.3 0.3 0.5" size="0.0675 0.1 0.0575" rgba="1 0.1 .3 1" mass="5"  />
+      </default>
+
+      <default class="bisto">
+      <geom type="cylinder" friction="0.3 0.3 0.5" size="0.04 0.055" rgba="1 0.1 .1 1" mass="5"  />
+      </default>
+
+      <default class="slider_cylinder">
+      <geom type="cylinder" friction="0.2 0.2 0.2" size="0.05115 0.01225 " rgba="1 0.1 .1 1" mass="0.5"  />
+      </default>
+
+      <default class="cylinder_obstacle_class">
+      <geom type="cylinder" friction="0.25 0.25 0.5" size="0.0375 0.057 " rgba="0 0. 0. 1" mass="10"  />
+      </default>
+
+      <default class="box_obstacle_class">
+      <geom type="box" friction="0.25 0.25 0.5" size="0.05325 0.05325 0.1 " rgba="0 0. 0 0" mass="10" contype='0' conaffinity='0' />
+      </default>
+
+      <default class="slider_box">
+      <geom type="box" friction="0.8 0.8 0.5" size="0.0545 0.077 0.0055" rgba="1 0.1 .1 1" mass="0.5"  />
+      </default>
+
+      <default class="pusher_cylinder">
+      <geom type="cylinder" friction="0.2 0.2 0.2" size="0.0145 0.055" rgba="1 0.1 .1 1" mass="8"  />
+      </default>
+
+      <default class="invisible_class_1">
+      <geom rgba="0.7 0.7 0.7 0"  />
+      </default>
+
+      <default class="invisible_class_2">
+      <geom rgba="0.1 0.1 0.1 0" />
+      </default>
+
+    </default>
+
+    <worldbody>
+      <body name="tool" pos="0. 0. 0.466" quat="1 0 0 0" childclass="pusher_cylinder">
+        <geom name="tool" rgba="0 0 1 1"/>
+        <joint axis="1 0 0" damping="0." name="robot_x" pos="0 0 0" type="slide" range="-1 1"/>
+        <joint axis="0 1 0" damping="0." name="robot_y" pos="0 0 0" type="slide" range="-1 1"/>
+        <site name='ee_point' pos='0. 0. 0.' type="sphere" size="0.005" rgba="1 1 1 0" />
+      </body>
+
+      <camera name="fixed" pos="1.9 0. 1.1" quat="1. 0. 0. 0." />
+      <light name="light" directional="true" diffuse=".6 .6 .6" pos="0 0 1" specular=".3 .3 .3"/>
+
+      <body name = "ground" pos="0. 0 -0.317" quat="1 0 0 0" >
+          <geom name="ground_0" type="plane" mass = "100" size="4 4 0.001" material="grid" friction="0.5 0.5 0.5" rgba ="1 1 1 1"/>
+      </body>
+
+      <!--Table-->
+      <body name="Table" pos="1.90 0. 0.05395" quat="1 0 0 0">
+        <!--Don't use this plane with the controller-->
+        <geom name="table_0" type="plane"  pos="0 0 0.361" size="100 100 0.001" rgba ="1 1 1 1" />
+        <geom type="box" name="table_object" mass="1" friction="0.8 0.8 0.5" size="0.4 0.5 0.36" rgba="1 1 1 1" />
+      </body>
+
+      <body name="goal_object" pos="1.8 0.  0.4262" quat="1 0 0 0" childclass="slider_cylinder">
+        <geom name="goal_object" rgba="0. 1.  0. 1"/>
+        <joint name="object_free_goal" type="free" limited='false'/>
+      </body>
+
+<!--       <body name="goal_object" pos="1.8 0.  0.4165" quat="1 0 0 0" childclass="slider_box">
+        <geom name="goal_object" rgba="0. 1.  0. 1"/>
+        <joint name="object_free_goal" type="free" limited='false'/>
+        <site name='c_1' pos='0.069 0.0915 0.003' type="sphere" size="0.01" rgba="1 1 1 0" />
+        <site name='c_2' pos='-0.069 0.0915 0.003' type="sphere" size="0.01" rgba="1 1 1 0" />
+        <site name='c_3' pos='-0.069 -0.0915 0.003' type="sphere" size="0.01" rgba="1 1 1 0" />
+        <site name='c_4' pos='0.069 -0.0915 0.003' type="sphere" size="0.01" rgba="1 1 1 0" />
+        <site name='c_1_in' pos='0.0545 0.077 0.003' type="sphere" size="0.01" rgba="1 1 1 0" />
+        <site name='c_2_in' pos='-0.0545 0.077 0.003' type="sphere" size="0.01" rgba="1 1 1 0" />
+        <site name='c_3_in' pos='-0.0545 -0.077 0.003' type="sphere" size="0.01" rgba="1 1 1 0" />
+        <site name='c_4_in' pos='0.0545 -0.077 0.003' type="sphere" size="0.01" rgba="1 1 1 0" />
+      </body>
+ -->
+      <body name="slider2" pos="2.0 0.  0.4165" quat="1 0 0 0" childclass="slider_cylinder">
+        <geom name="slider2" rgba="0. 1.  0. 1"/>
+        <joint name="slide2" type="free" limited='false'/>
+      </body>
+
+      <body name="slider3" pos="2.2 0.  0.4165" quat="1 0 0 0" childclass="slider_cylinder">
+        <geom name="slider3" rgba="0. 1.  0. 1"/>
+        <joint name="slide3" type="free" limited='false'/>
+      </body>
+
+      <body name="slider4" pos="2.4 0.  0.4165" quat="1 0 0 0" childclass="slider_cylinder">
+        <geom name="slider4" rgba="0. 1.  0. 1"/>
+        <joint name="slide4" type="free" limited='false'/>
+      </body>
+
+
+      <body name="obstacle" pos="1.95 0.  0.471" quat="1 0 0 0" childclass="cylinder_obstacle_class">
+        <geom name="obstacle" rgba="0. 0.  0. 0." contype="0" conaffinity="0"/>
+      </body>
+
+      <!--include file="include/obstacles.xml"/-->
+
+      <!-- Target -->
+      <body name="target" pos="2.1 0. .465">
+        <geom name="target"  material="target" type="sphere" size="0.01" contype="0" conaffinity="0" rgba="1 0 0 0" />
+      </body>
+      <body name="target_l" pos="1.9 0.15 .465">
+        <geom name="target_l"  material="target" type="sphere" size="0.01" contype="0" conaffinity="0" rgba="1 1 0 0" />
+      </body>
+      <body name="target_r" pos="1.9 -0.15 .465">
+        <geom name="target_r"  material="target" type="sphere" size="0.01" contype="0" conaffinity="0" rgba="1 0 1 0" />
+      </body>
+
+    </worldbody>
+
+</mujoco>
