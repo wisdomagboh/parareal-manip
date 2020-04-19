@@ -45,12 +45,14 @@ More information can be found in our conference paper [ISRR 2019](https://arxiv.
 
 We use coarse models (analytical and learned) and fine model (Mujoco) with Parareal for physics predictions of robotic pushing actions. 
 
-	1. Generate experimental data (skip to use existing)
+	1. Generate experimental data (skip to use existing data)
 		$ bash run_experiment.sh 
 
 	2. Generate results: plots, frames, text files. 
  		$ bash plot_generation.sh 
-		
+
+Alternatively skip step 1 and extract the experimental data into the project directory. Data is [here](https://www.dropbox.com/s/2arko70bhzc9t9m/exp_dataset.zip?dl=0). 
+
 ## Citation
 If you find the code useful please consider citing our paper at [ISRR 2019](https://arxiv.org/abs/1903.08470) 
 
