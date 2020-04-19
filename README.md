@@ -16,6 +16,8 @@ Here, we provide the source code for our implementation.
 
 More information can be found in our papers [ISRR 2019](https://arxiv.org/abs/1903.08470) and [JCVS 2020](https://arxiv.org/abs/1912.05958) (Conditionally Accepted)
 
+<img src="parareal_robotics.jpg" scale="0.75"/> 
+
 <img src="parareal_robotics.jpg" width="1169" height="482"/> 
 
 ## Getting Started
