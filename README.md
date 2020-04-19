@@ -4,7 +4,7 @@ A key component of many robotics model-based planning and control algorithms is 
 
 Parallel-in-time integration methods such as Parareal can help to leverage parallel computing to accelerate physics predictions and thus planning.
 
-The Parareal algorithm iterates between a coarse serial integrator and a fine parallel integrator. A key
+The Parareal algorithm iterates between a coarse serial model and a fine parallel model. A key
 challenge is to devise a coarse level model that is computationally cheap but accurate enough for Parareal
 to converge quickly. 
 
