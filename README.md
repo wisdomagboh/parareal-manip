@@ -28,7 +28,7 @@ More information can be found in our conference paper [ISRR 2019](https://arxiv.
 		$  pip install numpy pandas pillow pyquaternion matplotlib IPython tensorflow==2.0.0-beta1 shapely==1.6.4 
 	
 	4. Clone this repo/ Download and extract zip file.
-		$ git clone https://github.com/wisdomagboh/parareal-manipulation.git
+		$ git clone https://github.com/wisdomagboh/parareal-manip.git
 
 	5. Run setup.py to place custom domains into 'suite'
 		$  python3.5 setup/setup.py 
