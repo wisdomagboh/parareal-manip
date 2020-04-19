@@ -26,6 +26,9 @@ More information can be found in our conference paper [ISRR 2019](https://arxiv.
 
 	3. Install other required python packages 
 		$  pip install numpy pandas pyquaternion shapely matplotlib IPython tensorflow==2.0.0-beta1 pillow
+	
+	4. Clone this repo 
+		$ git clone ...
 
 	4. Run setup.py to place custom domains into 'suite'
 		$  python3.5 setup/setup.py 
