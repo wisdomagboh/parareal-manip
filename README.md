@@ -36,7 +36,7 @@ More information can be found in our papers [ISRR 2019](https://arxiv.org/abs/19
 		$  python3.5 data_generator.py , outputs data files like 'discrete_' and 'random_'
 
 	6. Train neural network (skip to use existing model) 
-		$ python3.5 train_model.py, uses step 5 data and outputs 'model_weights.h5' containing network model weights. 
+		$ python3.5 train_model.py, uses step 5 data and outputs 'model_weights.h5'.
 
 	7. Test neural network model (skip to use existing model)
 		$  python3.5 test_model.py, uses trained model and test data to compute prediction error. 
