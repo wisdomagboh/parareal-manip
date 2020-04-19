@@ -79,6 +79,7 @@ If you find the code useful please consider citing our paper at [ISRR 2019](http
 ## Watch videos
 
 [ISRR 2019](https://youtu.be/5e9oTeu4JOU) 
+
 [JVCS 2020](https://youtu.be/wCh2o1rf-gA)
 
 ## Have a question?
