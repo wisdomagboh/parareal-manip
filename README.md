@@ -33,13 +33,13 @@ More information can be found in our papers [ISRR 2019](https://arxiv.org/abs/19
 		$  python3.5 setup/setup.py 
 
 	5. Generate data to train neural network (skip to use existing model)
-		$  python3.5 data_generator.py , outputs data files like 'discrete_' and 'random_'
+		$  python3.5 data_generator.py  # outputs data files like 'discrete_ms.csv' and 'random_ms.csv'
 
 	6. Train neural network (skip to use existing model) 
-		$ python3.5 train_model.py, uses step 5 data and outputs 'model_weights.h5'.
+		$ python3.5 train_model.py  # uses step 5 data and outputs 'model_weights.h5'.
 
 	7. Test neural network model (skip to use existing model)
-		$  python3.5 test_model.py, uses trained model and test data to compute prediction error. 
+		$  python3.5 test_model.py  # uses trained model and test data to compute prediction error. 
 
 ## Running experiments
 
