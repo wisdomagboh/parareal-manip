@@ -8,7 +8,7 @@ The Parareal algorithm iterates between a coarse serial model and a fine paralle
 challenge is to devise a coarse level model that is computationally cheap but accurate enough for Parareal
 to converge quickly. 
 
-We propose two coarse physics models for robotic pushing --- An analytical and a deep neural network physics model. We use the Mujoco physics engine as the fine model. We use these accelerated physics predictions for robotic push planning and control. 
+We propose two coarse physics models for robotic pushing: An analytical and a deep neural network physics model. We use the Mujoco physics engine as the fine model. These accelerated physics predictions are then used for robotic push planning and control. 
 
 Here, we provide the source code for our implementation. 
 
