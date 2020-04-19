@@ -1,0 +1,92 @@
+<mujocoinclude>
+
+      <!xtion>
+      <!-- <body name="object_1" pos="1.95 0.0  0.496" quat="1 0 0 0">
+        <geom mass="5" type="box" name="object_1" friction="0.3 0.3 0.5" size="0.045 0.125 0.085" rgba="0.9 0.1  0. 1"  />
+        <!joint name="object_free_1" type="free" limited='false' />
+      </body> -->
+
+
+      <!-- <body name="object_2" pos="1.98 0.1  0.467" quat="1 0 0 0" childclass="bisto">
+        <geom name="object_2" />
+        <joint name="object_free_2" type="free" limited='false' />
+      </body>
+
+      <body name="object_3" pos="1.98 -0.1  0.467" quat="1 0 0 0" childclass="bisto">
+        <geom name="object_3" />
+        <joint name="object_free_3" type="free" limited='false' />
+      </body>
+
+      <body name="object_4" pos="2.1 0.25  0.4695" quat="1 0 0 0" childclass="abox">
+        <geom name="object_4" />
+        <joint name="object_free_4" type="free" limited='false' />
+      </body>
+
+      <body name="object_5" pos="2.1 -0.25  0.4695" quat="1 0 0 0" childclass="abox">
+        <geom name="object_5" />
+        <joint name="object_free_5" type="free" limited='false' />
+      </body>
+
+      <body name="object_6" pos="1.9 -0.24  0.467" quat="1 0 0 0" childclass="cheerios_2">
+        <geom name="object_6" />
+        <joint name="object_free_6" type="free" limited='false' />
+      </body>
+
+      <body name="object_7" pos="1.9 0.24  0.467" quat="1 0 0 0" childclass="cheerios_2">
+        <geom name="object_7" />
+        <joint name="object_free_7" type="free" limited='false' />
+      </body>
+
+      <body name="object_8" pos="1.6 0.2  0.467" quat="1 0 0 0">
+        <geom mass="5" type="box" name="object_8" friction="0.3 0.3 0.5" size="0.05 0.105 0.055" rgba="0.05 0.05  0. 1"  />
+        <joint name="object_free_8" type="free" limited='false' />
+      </body>
+
+      <body name="object_9" pos="1.6 -0.03  0.498" quat="1 0 0 0">
+        <geom mass="5" type="cylinder" name="object_9" friction="0.3 0.3 0.5" size="0.0875 0.086" rgba="0.05 0.05  0. 1"  />
+        <joint name="object_free_9" type="free" limited='false' />
+      </body>
+
+      <body name="object_10" pos="1.73 -0.4  0.467" quat="1 0 0 0" childclass="bisto">
+        <geom name="object_10" />
+        <joint name="object_free_10" type="free" limited='false' />
+      </body>
+
+      <body name="object_11" pos="1.73 -0.3  0.467" quat="1 0 0 0" childclass="bisto">
+        <geom name="object_11" />
+        <joint name="object_free_11" type="free" limited='false' />
+      </body>
+
+      <body name="object_12" pos="2.1 0.1  0.467" quat="1 0 0 0" childclass="bisto">
+        <geom name="object_12" />
+        <joint name="object_free_12" type="free" limited='false' />
+      </body>
+
+      <body name="object_13" pos="2.1 -0.1  0.467" quat="1 0 0 0" childclass="bisto">
+        <geom name="object_13" />
+        <joint name="object_free_13" type="free" limited='false' />
+      </body>
+
+      <body name="object_14" pos="2.1 0.  0.467" quat="1 0 0 0" childclass="bisto">
+        <geom name="object_14" />
+        <joint name="object_free_14" type="free" limited='false' />
+      </body>
+
+
+      <body name="object_15" pos="1.73 -0.2  0.467" quat="1 0 0 0" childclass="bisto">
+        <geom name="object_15" />
+        <joint name="object_free_15" type="free" limited='false' />
+      </body> -->
+
+  <!--comment>
+      <body name="object_8" pos="1.55 0.  0.547" quat="1 0 0 0">
+        <geom mass="10" type="box" name="object_8" friction="0.3 0.3 0.5" size="0.17 0.2 0.135" rgba="0.05 0.05  0. 1"  />
+        <joint name="object_free_8" type="free" limited='false' />
+      </body>
+      <body name="object_10" pos="1.8 0.1  0.465" quat="1 0 0 0">
+        <geom type="cylinder" name="object_10" friction="0.5 0.5 0.5" size="0.06 0.053" rgba="1 0.  0. 1"  />
+        <joint name="object_free_10" type="free" limited='false' />
+      </body>
+    </comment-->
+
+</mujocoinclude>

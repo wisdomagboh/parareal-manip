@@ -1,0 +1,6 @@
+<mujocoinclude>
+	<actuator>
+        <velocity joint='robot_x' kv="1e6" ctrlrange="-1 1"/>
+        <velocity joint='robot_y' kv="1e6" ctrlrange="-1 1"/>
+	</actuator>
+</mujocoinclude>

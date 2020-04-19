@@ -1,0 +1,108 @@
+<mujocoinclude>
+    <body name="robot" pos="0.0 0.0 0.0" >
+
+        <site name='robot' pos='0 0. 0.' type="sphere" size="0.01" rgba="1 1 1 0"/>
+        <geom pos="0 0 -0.28" type="mesh" rgba="0.15 0.15 0.15 0" mesh="body-collision" />
+        <geom pos="0 0 -0.28" type="mesh" rgba="0.15 0.15 0.15 0" mesh="top" />
+        <geom size="0.1 0.2295" pos="0.28 0 0.2295" quat="1 0.0 0 0" type="cylinder" rgba="0.9 0.9 0.9 0" />
+        <geom pos="0.28 0 0.456" quat="0.681998 0 0 -0.731354" type="mesh"  mesh="ur5_base" />
+        <geom size="0.2 0.3 0.3" pos="-0.2 0 0.3" type="box" mass="100" friction="0.5 0.5 0.5"/>
+
+        <joint axis="1 0 0" damping="0." name="robot_x" pos="0 0 0" type="slide" range="-1 1"/>
+        <joint axis="0 1 0" damping="0." name="robot_y" pos="0 0 0" type="slide" range="-1 1"/>
+        <joint axis="0 0 1" damping="0." name="robot_z" pos="0 0 0" type="hinge" range="-1 1"/>
+
+
+        <body name="base" pos="0 0 -0.2918">
+            <geom type="box" name="base" mass="1" friction="0.4 0.4 0.4" size="0.2 0.2 0.01425" rgba="0. 0. 0. 0." contype="1" conaffinity="1"/>
+        </body>
+
+		<body name="base_link" pos="0.28 0 0.545159" quat="-0.03489996  0.          0.         -0.99939078"  childclass='invisible_class_1'>
+            <inertial pos="0 0 0" mass="3.7" diaginertia="0.0102675 0.0102675 0.00666" />
+            <geom type="mesh"  mesh="shoulder" />
+            <body name="shoulder_link" pos="0 0.13585 0" quat=" 0.73727628  0.         -0.67559182  0.        ">
+                <inertial pos="0 0 0.28" mass="8.393" diaginertia="0.226891 0.226891 0.0151074" />
+                <geom type="mesh"  mesh="upperarm" />
+                <body name="elbow_link" pos="0 -0.1197 0.425" quat="0.99904822  0.         -0.04361939  0.        ">
+                    <inertial pos="0 0 0.25" mass="2.275" diaginertia="0.0494433 0.0494433 0.004095" />
+                    <geom type="mesh"  mesh="forearm" />
+                    <body name="wrist_1_link" pos="0 0 0.39225" quat="0.707107  0.       -0.707107  0.      ">
+                        <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5" mass="1.219" diaginertia="0.21942 0.111173 0.111173" />
+                        <geom type="mesh"  mesh="wrist1" />
+
+                        <body name="wrist_2_link" pos="0 0.093 0" quat="0.70710678  0.          0.         -0.70710678">
+                            <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5"  mass="1.219" diaginertia="0.21942 0.111173 0.111173" />
+                            <geom type="mesh"  friction="0.4 0.4 0.4" mesh="wrist2" />
+
+                            <body name="wrist_3_link" pos="0 0 0.09465" quat="0 0 -1 0">
+                                <inertial pos="0 0 0" quat="0.5 0.5 -0.5 0.5"  mass="0.1879" diaginertia="0.033822 0.0171365 0.0171365" />
+                                <geom type="mesh"  friction="0.8 0.8 0.8" mesh="wrist3" />
+
+                                <body name="ee_link" pos="0 0.0823 0" quat="0.707107 0 0 0.707107">
+                                    <inertial pos="-0.01 0 0" mass="0.001"  diaginertia="1.66667e-08 1.66667e-08 1.66667e-08" />
+                                    <geom size="0.005 0.005 0.005" friction="0.8 0.8 0.8" pos="-0.01 0 0" type="box" />
+
+                                    <body name="robotiq_85_base_link" pos="0 0 0" quat="0.5 0.5 0.5 0.5 " childclass='invisible_class_2'>
+                                        <inertial pos="0.00021987 -2.3546e-10 0.030163"  quat="0.707058 0.00723369 0.00723345 0.707081" mass="0.30915" diaginertia="0.00030737 0.000289758 0.000199102" />
+                                        <geom type="mesh"  friction="0.8 0.8 0.8" mesh="robotiq_85_base_link_coarse" />
+
+                                        <!body name="ee_point" pos="0 0 0.15" quat="1 0 0 0">
+                                            <!geom name="ee_point" type="sphere" rgba="0 0 1 1" friction="0.4 0.4 0.4" size="0.01" contype="0" conaffinity="0"/>
+                                            <!geom name="ee_point_2" pos="0 0 0.01" type="sphere" rgba="0 1 1 1" friction="0.4 0.4 0.4" size="0.01" contype="0" conaffinity="0"/>
+                                          <!/body>
+
+                                            <body name="tool" pos="0 -0.016 0.17" quat="1 0 0 0" childclass="pusher_cylinder">
+                                              <geom name="tool" quat="0.7071 0.7071 0 0" rgba="0 0 1 1"/>
+                                            </body>
+
+                                          <site name='ee_point' pos='0. 0. 0.17' type="sphere" size="0.005" rgba="1 1 1 0" />
+                                          <site name='ee_point_2' pos='0. 0. 0.18' type="sphere" size="0.005" rgba="0 1 1 0" />
+
+                                          <body name="left_outer_knuckle" pos="0.0306011 0 0.062792">
+                                          <inertial pos="0.0176337 -8.37808e-12 0.00279257" quat="0.533046 0.464609 0.464609 0.533046" mass="0.0122528" diaginertia="1.96077e-06 1.91173e-06 6.29839e-07" />
+                                          <geom type="mesh" friction="0.2 0 0.4"  mesh="outer_knuckle_coarse" />
+                                          <body name="left_outer_finger" pos="0.031691 0 -0.00193396">
+                                              <inertial pos="0.00144762 6.63219e-12 0.0237153" quat="0.999535 0 0.0304784 0" mass="0.0171261" diaginertia="5.57763e-06 4.79657e-06 1.16211e-06" />
+                                              <joint name="lc_close" pos="0 0 0" axis="0 -1 0" range="0 0.725" />
+                                              <geom type="mesh" friction="0.4 0.4 0.4"  mesh="outer_finger_coarse" />
+                                          </body>
+                                      </body>
+                                      <body name="left_inner_knuckle" pos="0.0127 0 0.0693075">
+                                          <inertial pos="0.0158715 -5.06388e-11 0.020879" quat="0.947655 0 0.319297 0" mass="0.0268022" diaginertia="1.22239e-05 9.8035e-06 3.03816e-06" />
+                                          <joint name="left_inner_knuckle_joint" pos="0 0 0" axis="0 -1 0" range="0 0.8757" />
+                                          <geom type="mesh" friction="0.4 0.4 0.4"  mesh="inner_knuckle_coarse" />
+                                          <body name="left_inner_finger" pos="0.0345853 0 0.045497">
+                                              <inertial pos="0.00397436 -1.27924e-10 0.0135581" quat="0.696023 -0.124705 -0.124705 0.696023" mass="0.0212577" diaginertia="5.50764e-06 5.41067e-06 1.46097e-06" />
+                                              <joint name="left_inner_finger_joint" pos="0 0 0" axis="0 -1 0" range="0 0.8757" />
+                                              <geom type="mesh" friction="0.4 0.4 0.4"  mesh="inner_finger_coarse" />
+                                          </body>
+                                      </body>
+                                      <body name="right_inner_knuckle" pos="-0.0127 0 0.0693075" quat="0 0 0 1">
+                                          <inertial pos="0.0158715 -5.06388e-11 0.020879" quat="0.947655 0 0.319297 0" mass="0.0268022" diaginertia="1.22239e-05 9.8035e-06 3.03816e-06" />
+                                          <joint name="right_inner_knuckle_joint" pos="0 0 0" axis="0 1 0" range="0 0.8757" />
+                                          <geom type="mesh" friction="0.4 0.4 0.4"  mesh="inner_knuckle_coarse" />
+                                          <body name="right_inner_finger" pos="0.034106 0 0.0458574">
+                                              <inertial pos="0.00397436 -1.27924e-10 0.0135581" quat="0.696023 -0.124705 -0.124705 0.696023" mass="0.0212577" diaginertia="5.50764e-06 5.41067e-06 1.46097e-06" />
+                                              <joint name="right_inner_finger_joint" pos="0 0 0" axis="0 1 0" range="0 0.8757" />
+                                              <geom type="mesh" friction="0.4 0.4 0.4"  mesh="inner_finger_coarse" />
+                                          </body>
+                                      </body>
+                                      <body name="right_outer_knuckle" pos="-0.0306011 0 0.062792" quat="0 0 0 1">
+                                          <inertial pos="0.0176337 -8.37808e-12 0.00279257" quat="0.533046 0.464609 0.464609 0.533046" mass="0.0122528" diaginertia="1.96077e-06 1.91173e-06 6.29839e-07" />
+                                          <geom type="mesh" friction="0.4 0.4 0.4"  mesh="outer_knuckle_coarse" />
+                                          <body name="right_outer_finger" pos="0.0317096 0 -0.00160136">
+                                              <inertial pos="0.00144762 6.63219e-12 0.0237153" quat="0.999535 0 0.0304784 0" mass="0.0171261" diaginertia="5.57763e-06 4.79657e-06 1.16211e-06" />
+                                              <joint name="rc_close" pos="0 0 0" axis="0 -1 0" range="0 0.725" />
+                                              <geom type="mesh" friction="0.4 0.4 0.4"  mesh="outer_finger_coarse" />
+                                          </body>
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </body>
+</mujocoinclude>
