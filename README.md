@@ -20,40 +20,38 @@ More information can be found in our papers [ISRR 2019](https://arxiv.org/abs/19
 
 ## Getting Started
 
-### Create a virtual environment (Code was tested with Ubuntu 16.04 and python3.5)
-$ virtualenv -p /usr/bin/python3.5 venv
+	1. Create a virtual environment (Code was tested with Ubuntu 16.04 and python3.5)
+		$  virtualenv -p /usr/bin/python3.5 venv
 
-### Install Physics Simulator Mujoco and dm_control in virtual env 
-Please follow instructions from Deepmind's dm_control project [here](https://github.com/deepmind/dm_control).
+	2. Install Physics Simulator Mujoco and dm_control in virtual env 
+		Please follow instructions from Deepmind's dm_control project [here](https://github.com/deepmind/dm_control).
 
-### Install other required python packages 
-$ pip install numpy pandas pyquaternion shapely matplotlib IPython tensorflow==2.0.0-beta1 pillow
+	3. Install other required python packages 
+		$  pip install numpy pandas pyquaternion shapely matplotlib IPython tensorflow==2.0.0-beta1 pillow
 
-### Run setup.py to place custom domains into 'suite'
-$ python3.5 setup/setup.py 
+	4. Run setup.py to place custom domains into 'suite'
+		$  python3.5 setup/setup.py 
 
-### Generate new neural network weights / Use existing 
+	5. Generate data to train neural network (skip to use existing model)
+		$  python3.5 data_generator.py 
 
-#### Generate data to train neural network 
-$ python3.5 data_generator.py 
+		Outputs:
+		'discrete_' files - used for training a model, and created by handing input states and actions from a 			discrete space to the generator.
+		'random_' files   - used for testing a model, and created by handing random (uniform) input states and 			actions in a given range to the generator.
+		'_initial' files  - contain initial state data for the sliders and the applied action (assume pusher starts 			at (0,0), and slider 1 starts on x-axis).
+		'_final' files    - contain displacement data (x,y,theta) and final velocities of the sliders.
 
-Outputs:
-'discrete_' files - used for training a model, and created by handing input states and actions from a discrete space to the generator.
-'random_' files   - used for testing a model, and created by handing random (uniform) input states and actions in a given range to the generator.
-'_initial' files  - contain initial state data for the sliders and the applied action (assume pusher starts at (0,0), and slider 1 starts on x-axis).
-'_final' files    - contain displacement data (x,y,theta) and final velocities of the sliders.
+	6. Train neural network (skip to use existing model) 
+		$ python3.5 train_model.py
 
-#### Train neural network 
-$ python3.5 train_model.py
+		Uses files from previous step and outputs:
+		model_weights.h5  - the weights of a trained model that can predict for up to 4 sliders. 
+							Network configuration: 25(=input),512,256,128,64,24(=output), 			activation=relu, use_bias=True
 
-Uses files from previous step and outputs:
-model_weights.h5  - the weights of a trained model that can predict for up to 4 sliders. 
-					Network configuration: 25(=input),512,256,128,64,24(=output), activation=relu, use_bias=True
+	7. Test neural network model 
+		$  python3.5 test_model.py 	  
 
-#### Test neural network model 
-$ python3.5 test_model.py 	  
-
-Uses trained model and test data generated in previous steps and computes prediction error. Also renders predicted final state vs. correct state.
+		Uses trained model and test data generated in previous steps and computes prediction error. Also renders 		 predicted final state vs. correct state.
 
 ## Running experiments, training and testing
 
