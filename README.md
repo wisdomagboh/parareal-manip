@@ -4,8 +4,6 @@ A key component of many robotics model-based planning and control algorithms is 
 
 Parallel-in-time integration methods such as Parareal can help to leverage parallel computing to accelerate physics predictions and thus planning.
 
-We propose combining a coarse (i.e. computationally cheap but not very accurate) predictive physics model, with a fine (i.e. computationally expensive but accurate) predictive physics model, to generate a hybrid model that is at the required speed and accuracy for a given manipulation task.
-
 The Parareal algorithm iterates between a coarse serial integrator and a fine parallel integrator. A key
 challenge is to devise a coarse level model that is computationally cheap but accurate enough for Parareal
 to converge quickly. 
