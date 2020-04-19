@@ -83,7 +83,8 @@ If you find the code useful please consider citing our paper at [ISRR 2019](http
 [CVS 2020](https://youtu.be/wCh2o1rf-gA)
 
 ## Have a question?
-For all queries please contact Wisdom Agboh (wisdomagboh@gmail.com).
+For all queries please contact Wisdom Agboh (wisdomagboh@gmail.com) or Oliver Grainger (mn17omg@leeds.ac.uk
+)
 
 ## License
 This project is licensed under the MIT License - see the 
