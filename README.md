@@ -27,19 +27,19 @@ More information can be found in our conference paper [ISRR 2019](https://arxiv.
 	3. Install other required python packages 
 		$  pip install numpy pandas pyquaternion shapely matplotlib IPython tensorflow==2.0.0-beta1 pillow
 	
-	4. Clone this repo 
-		$ git clone ...
+	4. Clone this repo/ Download and extract zip file.
+		$ git clone https://github.com/wisdomagboh/parareal-manipulation.git
 
-	4. Run setup.py to place custom domains into 'suite'
+	5. Run setup.py to place custom domains into 'suite'
 		$  python3.5 setup/setup.py 
 
-	5. Generate data to train neural network (skip to use existing model)
+	6. Generate data to train neural network (skip to use existing model)
 		$  python3.5 data_generator.py  # outputs data files like 'discrete_ms.csv' and 'random_ms.csv'
 
-	6. Train neural network (skip to use existing model) 
+	7. Train neural network (skip to use existing model) 
 		$ python3.5 train_model.py  # uses step 5 data and outputs 'model_weights.h5'.
 
-	7. Test neural network model (skip to use existing model)
+	8. Test neural network model (skip to use existing model)
 		$  python3.5 test_model.py  # uses trained model and test data to compute prediction error. 
 
 ## Running experiments
