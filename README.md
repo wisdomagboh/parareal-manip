@@ -14,7 +14,7 @@ We propose two coarse physics models for robotic pushing --- An analytical and a
 
 Here, we provide the source code for our implementation. 
 
-More information can be found in our conference paper [ISRR 2019](https://arxiv.org/abs/1903.08470) and journal article [JCVS 2020](https://arxiv.org/abs/1912.05958) (Conditionally accepted).
+More information can be found in our conference paper [ISRR 2019](https://arxiv.org/abs/1903.08470) and journal article [CVS 2020](https://arxiv.org/abs/1912.05958) (Conditionally accepted).
 
 <img src="parareal_robotics.jpg" scale="0.8"/> 
 
@@ -54,7 +54,7 @@ We use coarse models (analytical and learned) and fine model (Mujoco) with Parar
 ## Citation
 If you find the code useful please consider citing our paper at [ISRR 2019](https://arxiv.org/abs/1903.08470) 
 
-	@inproceedings{agboh_isrr19,
+	@inproceedings{Agboh_ISRR19,
 	  author    = {Wisdom C. Agboh and
 		       Daniel Ruprecht and
 		       Mehmet R. Dogar},
@@ -64,15 +64,15 @@ If you find the code useful please consider citing our paper at [ISRR 2019](http
 	  year      = {2019}
 	}
 
-**and** our journal article [JCVS 2020](https://arxiv.org/abs/1912.05958) (Conditionally accepted)
+**and** our journal article [CVS 2020](https://arxiv.org/abs/1912.05958) (Conditionally accepted)
 
-	@article{agboh_jcvs20,
+	@article{Agboh_CVS20,
 	  author    = {Wisdom C. Agboh and
 		       Oliver Grainger and 
 		       Daniel Ruprecht and
 		       Mehmet R. Dogar},
 	  title     = {Parareal with a Learned Coarse Model for Robotic Manipulation},
-	  journal   = {Journal of Computing and Visualization in Science},
+	  journal   = {Computing and Visualization in Science},
 	  year      = {2020}
 	}
 
