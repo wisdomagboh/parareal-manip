@@ -20,8 +20,8 @@ More information can be found in our conference paper [ISRR 2019](https://arxiv.
 
 ## Getting Started
 
-	1. Create a virtual environment (Code was tested with Ubuntu 16.04 and python3.5)
-		$  virtualenv -p /usr/bin/python3.5 venv
+	1. Create and activate a virtual environment (Code was tested with Ubuntu 16.04 and python3.5)
+		$  virtualenv -p /usr/bin/python3.5 venv ; source venv/bin/activate
 
 	2. Install Physics Simulator Mujoco and dm_control in virtual env 
 		Follow instructions from Deepmind's dm_control project https://github.com/deepmind/dm_control.
