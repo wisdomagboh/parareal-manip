@@ -12,7 +12,7 @@ We propose two coarse physics models for robotic pushing: An analytical and a de
 
 Here, we provide the source code for our implementation. 
 
-More information can be found in our conference paper [ISRR 2019](https://arxiv.org/abs/1903.08470) and journal article [CVS 2020](https://arxiv.org/abs/1912.05958) (Conditionally accepted).
+More information can be found in our conference paper [ISRR 2019](https://arxiv.org/abs/1903.08470) and journal article [CVS 2020](https://arxiv.org/abs/1912.05958) (Under review).
 
 <img src="parareal_robotics.jpg" scale="0.8"/> 
 
@@ -67,7 +67,7 @@ If you find the code useful please consider citing our paper at [ISRR 2019](http
 	  year      = {2019}
 	}
 
-**and** our journal article [CVS 2020](https://arxiv.org/abs/1912.05958) (Conditionally accepted)
+**and** our journal article [CVS 2020](https://arxiv.org/abs/1912.05958) (Under review)
 
 	@article{Agboh_CVS20,
 	  author    = {Wisdom C. Agboh and
