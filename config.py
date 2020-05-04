@@ -1,8 +1,4 @@
 
-STEPS = 8                       # Number of coarse steps
-ACTION_MAGNITUDE = 0.1          # MAX pusher speed
-PENETRATION_EPS = 5e-4          # Penetration tolerance during rejection sampling
-
 # State description parameters
 NUM_OBJS = 4       				# Number of dynamic objects in the scene (incl. goal obj.)
 DOF = 2            				# Robot's degrees of freedom
@@ -35,5 +31,9 @@ cols_in = DOF + NUM_OBJS*VARS - 1    	# number of input columns to network
 cols_out = NUM_OBJS*VARS             	# number of output columns of network
 rs = SLIDER_RADIUS
 rp = PUSHER_RADIUS
+
+STEPS = 8                       # Number of coarse steps
+ACTION_MAGNITUDE = 0.1          # MAX pusher speed
+PENETRATION_EPS = 5e-4          # Penetration tolerance during rejection sampling
 
 clear_frames = True 				# Clear folders containing frames
