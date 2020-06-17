@@ -55,7 +55,7 @@ We use coarse models (analytical and learned) and fine model (Mujoco) with Parar
 Alternatively, skip step 1 and extract data into the project directory. Data is on Dropbox [here](https://www.dropbox.com/sh/agju3lb8zz880pf/AABsi3JDA6Z2rvIi62suFRQka?dl=0) (178 MB). 
 
 ## Citation
-If you'd like to cite our work in your academic publications, we suggest the following BibTex citation: conference paper [ISRR 2019](https://arxiv.org/abs/1903.08470) 
+If you'd like to cite our work in your publications, we suggest the following BibTex citation: conference paper [ISRR 2019](https://arxiv.org/abs/1903.08470) 
 
 	@inproceedings{Agboh_ISRR19,
 	  author    = {Wisdom C. Agboh and
